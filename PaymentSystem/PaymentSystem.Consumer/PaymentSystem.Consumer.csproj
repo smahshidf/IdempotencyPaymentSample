@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>c33e0ffe-7c31-46b5-b045-5b6e16263201</UserSecretsId>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Aspire.RabbitMQ.Client" />
+    <PackageReference Include="MongoDB.Driver" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PaymentSystem.Contracts\PaymentSystem.Contracts.csproj" />
+    <ProjectReference Include="..\PaymentSystem.ServiceDefaults\PaymentSystem.ServiceDefaults.csproj" />
+  </ItemGroup>
+</Project>

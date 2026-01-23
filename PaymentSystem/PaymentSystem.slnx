@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="PaymentSystem.AppHost/PaymentSystem.AppHost.csproj" Id="42154416-efb1-4016-882d-56c1dc15e869" />
+  <Project Path="PaymentSystem.Consumer/PaymentSystem.Consumer.csproj" />
+  <Project Path="PaymentSystem.Contracts/PaymentSystem.Contracts.csproj" Id="f5a72dce-51af-4519-afcd-9d5d144147b7" />
+  <Project Path="PaymentSystem.ProviderApi/PaymentSystem.ProviderApi.csproj" />
+  <Project Path="PaymentSystem.ServiceDefaults/PaymentSystem.ServiceDefaults.csproj" />
+</Solution>
