@@ -51,7 +51,7 @@ app.MapPost("/pay", async (
         routingKey: "payment.requested");
 
     var evt = new PaymentRequestedEvent(
-        "3cf7ffdf-ccec-4ab8-b711-99d63d474ffa",
+        Guid.NewGuid().ToString(),
         Amount: request.Amount,
         Currency: request.Currency,
         UserId: request.UserId,
