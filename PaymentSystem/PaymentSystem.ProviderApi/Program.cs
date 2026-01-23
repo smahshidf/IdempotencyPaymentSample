@@ -51,10 +51,10 @@ app.MapPost("/pay", async (
         routingKey: "payment.requested");
 
     var evt = new PaymentRequestedEvent(
-        PaymentId: Guid.NewGuid().ToString(),
+        "3cf7ffdf-ccec-4ab8-b711-99d63d474ffa",
         Amount: request.Amount,
         Currency: request.Currency,
-        UserId: "user-123",
+        UserId: request.UserId,
         PaymentStatus: Enum.Parse<PaymentStatus>(request.Status, ignoreCase: true),
         RequestedAt: DateTime.UtcNow);
 
@@ -67,7 +67,7 @@ app.MapPost("/pay", async (
         basicProperties: new BasicProperties { Persistent = true },
         body: body);
 
-    return Results.Accepted(value: new { PaymentId = evt.PaymentId });
+    return Results.Accepted(value: new { PaymentId = evt.UserId });
 });
 
 

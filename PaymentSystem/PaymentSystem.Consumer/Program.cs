@@ -1,7 +1,7 @@
 using PaymentSystem.Consumer;
 using PaymentSystem.Consumer.Entities;
+using PaymentSystem.Consumer.Inbox;
 using PaymentSystem.Consumer.Mongo;
-using RabbitMQ.Client;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +14,7 @@ builder.AddRabbitMQClient("rabbitMq");
 // MongoDB
 builder.Services.AddMongoDb(builder.Configuration);
 builder.Services.AddSingleton<IPaymentRepository, PaymentRepository>();
+builder.Services.AddScoped<IInboxPersister, InboxPersister>();
 
 builder.Services.AddHostedService<ProcessMessage>();
 

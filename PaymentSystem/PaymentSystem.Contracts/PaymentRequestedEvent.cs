@@ -2,7 +2,8 @@
 namespace PaymentSystem.Contracts
 {
    public record PaymentRequestedEvent
-    (   string PaymentId,
+    (   
+        string MessageId,
         decimal Amount,
         string Currency,
         string UserId,
